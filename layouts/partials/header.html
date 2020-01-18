@@ -2,6 +2,8 @@
     <span class="header__inner">
         {{ partial "logo.html" . }}
 
+        {{ if or .Params.math .Site.Params.math }}{{ partial "math.html" . }}{{ end }}
+
         <span class="header__right">
             {{ if len .Site.Menus }}
                 {{ partial "menu.html" . }}
